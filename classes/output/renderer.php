@@ -82,6 +82,12 @@ class renderer extends plugin_renderer_base {
                 $cloneddisplayoptions->rightanswer = question_display_options::HIDDEN;
             }
 
+            // DEBUGGING todo hack - if the attempt is a preview attempt, view correctness (default it does not)
+            if ($attempt->preview) {
+                $cloneddisplayoptions->correctness = question_display_options::VISIBLE;
+                $cloneddisplayoptions->rightanswer = question_display_options::VISIBLE;
+            }
+
             if ($rightanswer && $attempt->state == quiz_attempt::IN_PROGRESS) {
                 $correctresponse = $qa->get_correct_response();
                 if (!is_null($correctresponse)) {

@@ -132,3 +132,5 @@ $string['varnumeric_instruction'] = 'Write your answer in the space provided.';
 $string['varnumericset_instruction'] = 'Write your answer in the space provided.';
 $string['varnumunit_instruction'] = 'Write your answer in the space provided.';
 $string['wordselect_instruction'] = 'Select the answer(s) by circling the key word(s).';
+
+$string['answersheets:genericsheet'] = 'Download generic answer sheet';

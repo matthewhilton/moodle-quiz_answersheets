@@ -175,6 +175,8 @@ class quiz_answersheets_report extends quiz_attempts_report {
                 }
                 $table->out($options->pagesize, true);
 
+                echo \html_writer::link((new moodle_url('/mod/quiz/report/answersheets/genericanswersheet.php', ['quizid' => $quiz->id])), get_string('answersheets:genericsheet', 'quiz_answersheets'));
+
                 if (!$table->is_downloading() && has_capability('quiz/answersheets:bulkdownload', $this->context)) {
                     echo $renderer->bulk_download_link($options);
                 }

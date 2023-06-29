@@ -92,7 +92,7 @@ $renderer = $PAGE->get_renderer('quiz_answersheets');
 // Summary table.
 $sumdata = utils::prepare_summary_attempt_information($attemptobj, !$isattemptfinished, $reportoptions);
 
-// Navigation.
+// Navigation.$
 echo $renderer->render_attempt_navigation();
 
 // Page content.
